@@ -10,7 +10,7 @@ install_requirements:
 pull:
 	git pull --rebase
 
-upgrade: pull install_requirements update_static update_db restart
+upgrade: pull install_requirements update_static update_db
 
 update_static:
 	rm static -rf
@@ -26,8 +26,3 @@ create_admin:
 init: init_db create_admin
 
 init_db: update_db
-
-restart:
-	touch $(UWSGI_INI)
-
-	
