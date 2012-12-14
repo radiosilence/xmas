@@ -10,7 +10,7 @@ install_requirements:
 pull:
 	git pull --rebase
 
-upgrade: pull install_requirements update_static optimize_js update_db restart
+upgrade: pull install_requirements update_static update_db restart
 
 update_static:
 	rm static -rf
@@ -19,10 +19,6 @@ update_static:
 update_db:
 	$(VIRTUAL_ENV)/bin/python manage.py syncdb --noinput
 	$(VIRTUAL_ENV)/bin/python manage.py migrate
-
-optimize_js:
-	 r.js -o name=main out=static/js/main-built.js baseUrl=static/js
-
 
 create_admin:
 	$(VIRTUAL_ENV)/bin/python manage.py create_admin
