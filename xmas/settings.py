@@ -166,3 +166,8 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from xmas.settings_local import *
+except ImportError:
+    pass
