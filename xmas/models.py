@@ -24,7 +24,7 @@ class Card(models.Model):
             ('It appears that I\'ve sent you a Christmas card. Take a deep '
             + 'breath, let that sink in for a moment, then click here to have '
             + 'a looksie: \n\n'
-            + 'http://blackflags.co.uk/xmas{}'
+            + 'http://blackflags.co.uk{}'
             + '\n\n'
             + 'Toodle pip!'
             ).format(
