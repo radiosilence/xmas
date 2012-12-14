@@ -9,6 +9,6 @@
  *   - 'out' will be overidden by django-require during the build process. 
  */
 ({
-    optimize: "closure",
+    optimize: "uglify",
     wrap: true
 })

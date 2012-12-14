@@ -85,15 +85,15 @@ REQUIRE_BUILD_PROFILE = 'default.build.js'
 REQUIRE_JS = "require.js"
 REQUIRE_DEBUG = DEBUG
 REQUIRE_ENVIRONMENT = 'node'
-REQUIRE_STANDALONE_MODULES = {
-    "main": {
-        # Where to output the built module, relative to REQUIRE_BASE_URL.
-        "out": "main-built.js",
+# REQUIRE_STANDALONE_MODULES = {
+#     "main": {
+#         # Where to output the built module, relative to REQUIRE_BASE_URL.
+#         "out": "main-built.js",
 
-        # Optional: A build profile used to build this standalone module.
-        "build_profile": "main.build.js",
-    }
-}
+#         # Optional: A build profile used to build this standalone module.
+#         "build_profile": "main.build.js",
+#     }
+# }
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'qm#)a&amp;npprej-fxz8ox(@q^8x!xz0ox*k4+qf**19esi9f#)7k'
