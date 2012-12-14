@@ -4,44 +4,53 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
-// ----------------------------------------
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
+$handwriting: Zeyada, serif;
+$print: Vidaloka, Trocchi, serif;
 
-// @import "compass/css3";
-// @import "foundation/settings";
-// @import "foundation/functions/all";
+div.card {
+    font-family: $handwriting;
+    padding-top: 40px;
+    p {
+        &.dear {
+            font-size: 64px;
+            span.recipient {
+                font-weight: bold;
+            }
+            text-align: center;
 
-// Control which mixins you have access too
+        }
+        &.merry {
+            font-family: $print;
+            text-transform: uppercase;
+            font-size: 72px;
+            text-align: center;
 
-// @import "foundation/mixins/clearfix";
-// @import "foundation/mixins/css-triangle";
-// @import "foundation/mixins/font-size";
+        }
+        &.good {
+            text-align: center;
+            font-size: 32px;
+        }
+        &.best {
+            font-size: 48px;
+            margin-bottom: 0px;
+            line-height: 18px;
+            text-align: center;
+        }
+        &.sender {
+            font-size: 56px;
+            text-align: center;
 
-// Must include next two for semantic grid to work
+        }
+        &.kisses {
+            font-size: 64px;
+            text-align: center;
+        }
+    }
+    div.message {
+        p {
+            font-size: 32px;
+            text-align: center;
 
-// @import "foundation/mixins/respond-to";
-// @import "foundation/mixins/semantic-grid";
-
-// @import "modular-scale";
-// @import "foundation/common/globals";
-
-// Must include the grid for any responsiveness
-
-// @import "foundation/components/grid";
-
-// Control which common styles get compiled
-
-// @import "foundation/common/typography";
-// @import "foundation/common/forms";
-
-// Control which components you get if customizing
-
-// @import "foundation/components/modules/buttons";
-// @import "foundation/components/modules/tabs";
-// @import "foundation/components/modules/ui";
-// @import "foundation/components/modules/topbar";
-// @import "foundation/components/modules/navbar";
-// @import "foundation/components/modules/orbit";
-// @import "foundation/components/modules/reveal";
-// @import "foundation/components/modules/offcanvas";
+        }
+    }
+}
