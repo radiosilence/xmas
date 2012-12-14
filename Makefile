@@ -8,7 +8,7 @@ install_requirements:
 	$(VIRTUAL_ENV)/bin/pip install -r requirements.txt
 
 pull:
-	git pull
+	git pull --rebase
 
 upgrade: pull install_requirements update_static compress optimize_js update_db restart
 
