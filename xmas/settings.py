@@ -129,8 +129,10 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'xmas',
     'require',
+    'south',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load markup %}
+{% block content %}
+    <div class="row">
+        <div class="twelve columns">
+            <h3>Dear {{ card.recipient }}</h3>
+            {{ card.message|markdown }}
+            <h2>Merry Christmas.</h2>
+            <p>Best wishes from your good pal James</p>
+        </div>
+    </div>
+{% endblock %}
