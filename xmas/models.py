@@ -20,6 +20,20 @@ class Card(models.Model):
         })
 
     def send(self):
+        send_mail('Oh my! A Christmas card? Wow!',
+            ('It appears that I\'ve sent you a Christmas card. Take a deep '
+            + 'breath, let that sink in for a moment, then click here to have '
+            + 'a looksie: \n\n'
+            + 'http://blackflags.co.uk/xmas{}'
+            + '\n\n'
+            + 'Toodle pip!'
+            ).format(
+                self.get_absolute_url()
+            ),
+            'James Cleveland <jc@blackflags.co.uk>',
+            [self.email],
+            fail_silently=False
+        )
         self.sent = True
 
     def __unicode__(self):
@@ -29,4 +43,3 @@ class Card(models.Model):
 def send_card(sender, instance, **kwargs):
     if not instance.draft:
         instance.send()
-

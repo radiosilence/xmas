@@ -5883,45 +5883,49 @@ div.card {
   padding-top: 40px;
 }
 /* line 14, ../sass/app.scss */
+div.card p {
+  word-wrap: break-word;
+}
+/* line 16, ../sass/app.scss */
 div.card p.dear {
   font-size: 64px;
   text-align: center;
 }
-/* line 16, ../sass/app.scss */
+/* line 18, ../sass/app.scss */
 div.card p.dear span.recipient {
   font-weight: bold;
 }
-/* line 22, ../sass/app.scss */
+/* line 24, ../sass/app.scss */
 div.card p.merry {
   font-family: Vidaloka, Trocchi, serif;
   text-transform: uppercase;
   font-size: 72px;
   text-align: center;
 }
-/* line 29, ../sass/app.scss */
+/* line 31, ../sass/app.scss */
 div.card p.good {
   text-align: center;
   font-size: 32px;
 }
-/* line 33, ../sass/app.scss */
+/* line 35, ../sass/app.scss */
 div.card p.best {
   font-size: 48px;
   margin-bottom: 0px;
-  line-height: 18px;
   text-align: center;
 }
-/* line 39, ../sass/app.scss */
+/* line 40, ../sass/app.scss */
 div.card p.sender {
   font-size: 56px;
   text-align: center;
 }
-/* line 44, ../sass/app.scss */
+/* line 45, ../sass/app.scss */
 div.card p.kisses {
   font-size: 64px;
   text-align: center;
+  letter-spacing: 20px;
 }
-/* line 50, ../sass/app.scss */
+/* line 52, ../sass/app.scss */
 div.card div.message p {
-  font-size: 32px;
+  font-size: 42px;
   text-align: center;
 }

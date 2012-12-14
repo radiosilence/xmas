@@ -10,7 +10,9 @@ $print: Vidaloka, Trocchi, serif;
 div.card {
     font-family: $handwriting;
     padding-top: 40px;
+
     p {
+        word-wrap: break-word;
         &.dear {
             font-size: 64px;
             span.recipient {
@@ -33,7 +35,6 @@ div.card {
         &.best {
             font-size: 48px;
             margin-bottom: 0px;
-            line-height: 18px;
             text-align: center;
         }
         &.sender {
@@ -44,11 +45,12 @@ div.card {
         &.kisses {
             font-size: 64px;
             text-align: center;
+            letter-spacing: 20px;
         }
     }
     div.message {
         p {
-            font-size: 32px;
+            font-size: 42px;
             text-align: center;
 
         }
