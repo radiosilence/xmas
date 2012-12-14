@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from xmas.models import Card
 
-def card(request, id=None):
-    return render(request, 'card.html', {})
+def card(request, uuid):
+    card = get_object_or_404(Card, uuid=uuid)
+    return render(request, 'card.html', {
+        'card': card
+    })

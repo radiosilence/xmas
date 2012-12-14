@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding model 'Card'
         db.create_table(u'xmas_card', (
-            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('uuid', self.gf('django.db.models.fields.CharField')(max_length=36, primary_key=True)),
             ('recipient', self.gf('django.db.models.fields.CharField')(max_length=255)),
             ('email', self.gf('django.db.models.fields.EmailField')(max_length=75)),
             ('message', self.gf('django.db.models.fields.TextField')()),
@@ -28,10 +28,10 @@ class Migration(SchemaMigration):
         u'xmas.card': {
             'Meta': {'object_name': 'Card'},
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
-            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'message': ('django.db.models.fields.TextField', [], {}),
             'recipient': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
-            'sent': ('django.db.models.fields.BooleanField', [], {'default': 'False'})
+            'sent': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
+            'uuid': ('django.db.models.fields.CharField', [], {'max_length': '36', 'primary_key': 'True'})
         }
     }
 
