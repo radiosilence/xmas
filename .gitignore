@@ -6,17 +6,10 @@ static/
 build/
 dist/
 .svn/
-media/location_img/
-media/uploads/
-media/review_photos/
-media/cache/
-media/header_image/
 media/
-media/area_image/
 */settings_local.py
 *.swp
 .sass-cache/
-uwsgi.yaml
 wsgi.sock
 *.log
 sqlbackups/

@@ -14,7 +14,7 @@ upgrade: pull install_requirements update_static update_db
 
 update_static:
 	rm static -rf
-	$(VIRTUAL_ENV)/bin/python manage.py collectstatic -l --noinput
+	$(VIRTUAL_ENV)/bin/python manage.py collectstatic --noinput
 
 update_db:
 	$(VIRTUAL_ENV)/bin/python manage.py syncdb --noinput
