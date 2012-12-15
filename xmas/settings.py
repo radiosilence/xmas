@@ -160,6 +160,14 @@ INSTALLED_APPS = (
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
+
+if DEBUG:
+    level = 'DEBUG'
+    handler = 'console'
+else:
+    level = 'WARN'
+    handler = 'file'
+
 LOGGING = {
     'version': 1,
     'formatters': {
@@ -172,30 +180,26 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'DEBUG',
+            'level': level,
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
-            },
+        },
         'file': {
-            'level': 'DEBUG',
+            'level': level,
             'class': 'logging.FileHandler',
             'filename': 'error.log',
             'formatter': 'simple'
-            },
         },
+    },
     'loggers': {
         'django': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
+            'handlers': [handler],
+            'level': level,
             'propagate': True,
-            },
-        }
+        },
     }
+}
 
-if DEBUG:
-    # make all loggers use the console.
-    for logger in LOGGING['loggers']:
-        LOGGING['loggers'][logger]['handlers'] = ['console']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
