@@ -27,22 +27,10 @@ requirejs.config({
         'foundation/jquery.foundation.forms': {
             deps: ['jquery']
         },
-        'foundation/jquery.foundation.joyride': {
-            deps: ['jquery']
-        },
-        'foundation/jquery.foundation.magellan': {
-            deps: ['jquery']
-        },
         'foundation/jquery.foundation.mediaQueryToggle': {
             deps: ['jquery']
         },
         'foundation/jquery.foundation.navigation': {
-            deps: ['jquery']
-        },
-        'foundation/jquery.foundation.orbit': {
-            deps: ['jquery']
-        },
-        'foundation/jquery.foundation.reveal': {
             deps: ['jquery']
         },
         'foundation/jquery.foundation.tabs': {
@@ -70,12 +58,8 @@ requirejs.config({
                 'foundation/jquery.foundation.buttons',
                 'foundation/jquery.foundation.clearing',
                 'foundation/jquery.foundation.forms',
-                'foundation/jquery.foundation.joyride',
-                'foundation/jquery.foundation.magellan',
                 'foundation/jquery.foundation.mediaQueryToggle',
                 'foundation/jquery.foundation.navigation',
-                'foundation/jquery.foundation.orbit',
-                'foundation/jquery.foundation.reveal',
                 'foundation/jquery.foundation.tabs',
                 'foundation/jquery.foundation.tooltips',
                 'foundation/jquery.foundation.topbar',
