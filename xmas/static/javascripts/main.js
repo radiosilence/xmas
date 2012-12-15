@@ -47,25 +47,6 @@ requirejs.config({
         },
         'foundation/jquery.placeholder': {
             deps: ['jquery']
-        },
-        'foundation/app': {
-            deps: [
-                'foundation/jquery.cookie',
-                'foundation/jquery.event.move',
-                'foundation/jquery.event.swipe',
-                'foundation/jquery.foundation.accordion',
-                'foundation/jquery.foundation.alerts',
-                'foundation/jquery.foundation.buttons',
-                'foundation/jquery.foundation.clearing',
-                'foundation/jquery.foundation.forms',
-                'foundation/jquery.foundation.mediaQueryToggle',
-                'foundation/jquery.foundation.navigation',
-                'foundation/jquery.foundation.tabs',
-                'foundation/jquery.foundation.tooltips',
-                'foundation/jquery.foundation.topbar',
-                'foundation/jquery.offcanvas',
-                'foundation/jquery.placeholder',
-            ]
         }
     }
 });
@@ -85,7 +66,6 @@ require([ 'jquery'
         , 'foundation/jquery.foundation.topbar'
         , 'foundation/jquery.offcanvas'
         , 'foundation/jquery.placeholder'
-        , 'foundation/app'
         ], function($) {
     $(function() {
     });
