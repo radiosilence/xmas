@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     'xmas',
     'require',
     'south',
+    'django_extensions',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
