@@ -20,7 +20,7 @@ class Card(models.Model):
         })
 
     def send(self):
-        if not self.sent:
+        if not self.sent and not self.draft:
             send_mail('Oh my! A Christmas card? Wow!',
                 ('It appears that I\'ve sent you a Christmas card. Take a deep '
                 + 'breath, let that sink in for a moment, then click here to have '
@@ -39,8 +39,3 @@ class Card(models.Model):
 
     def __unicode__(self):
         return u'{recipient} ({uuid})'.format(**self.__dict__)
-
-@receiver(pre_save, sender=Card)
-def send_card(sender, instance, **kwargs):
-    if not instance.draft:
-        instance.send()
