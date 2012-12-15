@@ -20,7 +20,6 @@ class Card(models.Model):
         })
 
     def send(self):
-        self.sent = True
         if not self.sent:
             send_mail('Oh my! A Christmas card? Wow!',
                 ('It appears that I\'ve sent you a Christmas card. Take a deep '
@@ -36,6 +35,7 @@ class Card(models.Model):
                 [self.email],
                 fail_silently=False
             )
+        self.sent = True
 
     def __unicode__(self):
         return u'{recipient} ({uuid})'.format(**self.__dict__)
