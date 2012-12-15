@@ -4,6 +4,7 @@ from django.dispatch import receiver
 from django_extensions.db.fields import UUIDField
 from django.db.models.signals import pre_save
 from django.core.mail import send_mail
+from django.contrib.sites.models import get_current_site
 
 class Card(models.Model):
     uuid = UUIDField(primary_key=True)
@@ -25,11 +26,12 @@ class Card(models.Model):
                 ('It appears that I\'ve sent you a Christmas card. Take a deep '
                 + 'breath, let that sink in for a moment, then click here to have '
                 + 'a looksie: \n\n'
-                + 'http://blackflags.co.uk/xmas{}'
+                + 'http://{domain}{url}'
                 + '\n\n'
                 + 'Toodle pip!'
                 ).format(
-                    self.get_absolute_url()
+                    domain=get_current_site({}).domain,
+                    url=self.get_absolute_url()
                 ),
                 'James Cleveland <jc@blackflags.co.uk>',
                 [self.email],
