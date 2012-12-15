@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
-{% load markup %}
 {% block content %}
     <div class="row">
         <div class="twelve columns card">
             <p class="dear">Dear <span class="recipient">{{ card.recipient }}</span></p>
             <div class="message">
-                {{ card.message|markdown }}
+                {{ card.message|linebreaks }}
             </div>
             <p class="merry">Merry Christmas.</h2>
             <p class="good">I hope you have a good one because that would be good.</p>
