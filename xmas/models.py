@@ -36,6 +36,7 @@ class Card(models.Model):
                 fail_silently=False
             )
         self.sent = True
+        self.save()
 
     def __unicode__(self):
         return u'{recipient} ({uuid})'.format(**self.__dict__)
