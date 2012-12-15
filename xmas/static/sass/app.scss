@@ -12,13 +12,13 @@
 @import "foundation/settings";
 @import "foundation/functions/all";
 
-// Control which mixins you have access too
+// // Control which mixins you have access too
 
 @import "foundation/mixins/clearfix";
 @import "foundation/mixins/css-triangle";
 @import "foundation/mixins/font-size";
 
-// Must include next two for semantic grid to work
+// // Must include next two for semantic grid to work
 
 @import "foundation/mixins/respond-to";
 @import "foundation/mixins/semantic-grid";
@@ -26,16 +26,16 @@
 @import "modular-scale";
 @import "foundation/common/globals";
 
-// Must include the grid for any responsiveness
+// // Must include the grid for any responsiveness
 
 @import "foundation/components/grid";
 
-// Control which common styles get compiled
+// // Control which common styles get compiled
 
 @import "foundation/common/typography";
 @import "foundation/common/forms";
 
-// Control which components you get if customizing
+// // Control which components you get if customizing
 
 // @import "foundation/components/modules/buttons";
 // @import "foundation/components/modules/tabs";
@@ -93,9 +93,12 @@ div.card {
     }
     div.message {
         p {
-            font-size: 42px;
+            font-size: 32px;
             text-align: center;
 
         }
+    }
+    img {
+        opacity: 0.95;
     }
 }

@@ -1399,6 +1399,10 @@ div.card p.kisses {
 }
 /* line 95, ../sass/app.scss */
 div.card div.message p {
-  font-size: 42px;
+  font-size: 32px;
   text-align: center;
+}
+/* line 101, ../sass/app.scss */
+div.card img {
+  opacity: 0.95;
 }

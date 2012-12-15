@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}A rather lovely card for {{ card.recipient }}{% endblock %}
 {% block content %}
     <div class="row">
-        <div class="twelve columns card">
+        <div class="ten columns card offset-by-one">
             <p class="dear">Dear <span class="recipient">{{ card.recipient }}</span></p>
             <div class="message">
                 {{ card.message|linebreaks }}
             </div>
-            <p class="merry">Merry Christmas.</h2>
+            <p class="merry">Merry Christmas.</p>
             <p class="good">I hope you have a good one because that would be good.</p>
             <p class="best">Best wishes from your pal James</p>
-            <p class="kisses"> xxx</p>
+            <p class="kisses"> 
+                xxx<br/>
+                <img src={% static 'images/santa-head.svg' %} width=300 height=300 />
+            </p>
+            
         </div>
     </div>
 {% endblock %}
